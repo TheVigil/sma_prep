@@ -12,3 +12,5 @@
 /home/jon/dev/sma_prep/obj/Debug/net10.0/sma_prep.pdb
 /home/jon/dev/sma_prep/obj/Debug/net10.0/sma_prep.genruntimeconfig.cache
 /home/jon/dev/sma_prep/obj/Debug/net10.0/ref/sma_prep.dll
+/home/jon/dev/sma_prep/bin/Debug/net10.0/data/trains.json
+/home/jon/dev/sma_prep/obj/Debug/net10.0/sma_prep.sourcelink.json

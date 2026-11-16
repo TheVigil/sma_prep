@@ -9,7 +9,6 @@ public record ValidationMessage(string? TrainId, Severity Severity, string Messa
 
 public class TrainValidator
 {
-
     private readonly IEnumerable<ITrainRule> _rules;
     public TrainValidator(IEnumerable<ITrainRule> rules) => _rules = rules;    
 
@@ -24,6 +23,6 @@ public class TrainValidator
                 validationMessages.AddRange(rule.Check(train));
             }
         }
-
+        return validationMessages;
     }
 }

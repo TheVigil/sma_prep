@@ -5,7 +5,7 @@ namespace sma_prep;
 
 [JsonPolymorphic]
 [JsonDerivedType(typeof(Train), "Passenger")]
-[JsonDerivedType(typeof(Train), "Freight")]
+[JsonDerivedType(typeof(FreightTrain), "FreightTrain")]
 public class Train
 {
     public string Id { get; set; } = "";
