@@ -1,0 +1,1 @@
+﻿new TimetableBasics.TimetableService().Run();

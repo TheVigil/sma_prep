@@ -1,0 +1,39 @@
+[
+  {
+    "$type": "Passenger",
+    "id": "IC 101",
+    "operator": "SBB",
+    "maxSpeedKmh": 160,
+    "sections": [
+      { "sectionId": "ZH-OE", "entry": "08:00:00", "exit": "08:06:00" }
+    ]
+  },
+  {
+    "$type": "Passenger",
+    "id": "RE 205",
+    "operator": "SBB",
+    "maxSpeedKmh": 160,
+    "sections": [
+      { "sectionId": "ZH-OE", "entry": "08:04:00", "exit": "08:10:00" }
+    ]
+  },
+  {
+    "$type": "Freight",
+    "id": "G 7001",
+    "operator": "SBB Cargo",
+    "loadTonnes": 1800,
+    "maxSpeedKmh": 100,
+    "sections": [
+      { "sectionId": "OE-WI", "entry": "08:20:00", "exit": "08:35:00" }
+    ]
+  },
+  {
+    "$type": "Passenger",
+    "id": "S 12",
+    "operator": "SBB",
+    "maxSpeedKmh": 160,
+    "sections": [
+      { "sectionId": "OE-WI", "entry": "08:38:00", "exit": "08:44:00" }
+    ]
+  }
+]

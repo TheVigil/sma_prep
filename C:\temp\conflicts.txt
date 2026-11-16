@@ -1,0 +1,4 @@
+=== Conflict report 2026-11-15 15:50 ===
+ - IC 101 and RE 205 conflict on ZH-OE (8:00 AM-8:06 AM vs 8:04 AM-8:10 AM, headway 3 min)
+ - G 7001 and S 12 conflict on OE-WI (8:20 AM-8:35 AM vs 8:38 AM-8:44 AM, headway 5 min)
+ - G 7001 exceeds the 1500 t load limit (1800 t)
