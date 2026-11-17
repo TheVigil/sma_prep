@@ -11,9 +11,12 @@ public class TrainRepository : ITrainRepository
 
     public TrainRepository(string path) => _path = path;
 
-    public IReadOnlyList<Train> GetTrains()
+    public async Task<IReadOnlyList<Train>> GetAllTrainsAsync(CancellationToken cancellationToken)
     {
-        var json = File.ReadAllText(_path);
-        return JsonSerializer.Deserialize<List<Train>>(json, options) ?? new List<Train>();
+        await using var stream = File.OpenRead(_path);
+        
+        var trains = await JsonSerializer.DeserializeAsync<List<Train>>(stream, options, cancellationToken);
+
+        return trains ?? new List<Train>();
     }
 }

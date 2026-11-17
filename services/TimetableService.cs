@@ -14,13 +14,13 @@ public class TimetableService(ITrainRepository repository, TrainValidator trainV
     private ConflictDetector _conflictDetector = conflictDetector;
     private ReportFormatter _reportFormatter = reportFormatter;
     private SpeedRestriction restriction = new();
-    public void Run()
+    public async Task RunAsync()
     {
         // 1. Load trains
-        var trains = _repository.GetTrains();
+        var trains = await _repository.GetAllTrainsAsync();
 
         // 2. Validate
-        var validationMessages = _trainValidator.ValidateTrains((List<Train>)trains);
+        var validationMessages = _trainValidator.ValidateTrains(trains);
 
         // 3. Apply a temporary speed restriction to all trains
         restriction.ApplyRestriction(trains, 120.0);

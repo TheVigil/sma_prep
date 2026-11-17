@@ -13,7 +13,7 @@ public class TrainValidator
     private readonly IEnumerable<ITrainRule> _rules;
     public TrainValidator(IEnumerable<ITrainRule> rules) => _rules = rules;    
 
-    public IReadOnlyList<ValidationMessage> ValidateTrains(List<Train> trains)
+    public IReadOnlyList<ValidationMessage> ValidateTrains(IReadOnlyList<Train> trains)
     {
         var validationMessages = new List<ValidationMessage>();
 

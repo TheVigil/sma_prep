@@ -5,5 +5,5 @@ namespace sma_prep.trainRepositories;
 
 public interface ITrainRepository
 {
-    public IReadOnlyList<Train> GetTrains();
+    public Task<IReadOnlyList<Train>> GetAllTrainsAsync(CancellationToken cancellationToken = default);
 }
