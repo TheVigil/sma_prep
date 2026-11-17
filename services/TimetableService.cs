@@ -1,9 +1,9 @@
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Text;
-using sma_prep;
-using sma_prep.classes;
+using sma_prep.rules;
+using sma_prep.trains;
+using sma_prep.trainRepositories;
+using sma_prep.conflicts;
+using sma_prep.reporting;
+using sma_prep.policies;
 
 namespace TimetableBasics;
 
@@ -14,7 +14,6 @@ public class TimetableService(ITrainRepository repository, TrainValidator trainV
     private TrainValidator _trainValidator = trainValidator;
     private ConflictDetector _conflictDetector = conflictDetector;
     private ReportFormatter _reportFormatter = reportFormatter;
-
     private SpeedRestriction restriction = new();
     public void Run()
     {

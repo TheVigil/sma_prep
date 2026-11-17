@@ -1,7 +1,8 @@
 using System;
 using System.Text;
+using sma_prep.conflicts;
 
-namespace sma_prep;
+namespace sma_prep.reporting;
 
 public class ReportFormatter
 {

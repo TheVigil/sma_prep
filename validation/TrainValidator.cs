@@ -1,8 +1,9 @@
 using System;
 using System.Data;
-using sma_prep.interfaces;
+using sma_prep.rules;
+using sma_prep.trains;
 
-namespace sma_prep;
+namespace sma_prep.rules;
 
 public enum Severity { INFO, WARNING, ERROR };
 public record ValidationMessage(string? TrainId, Severity Severity, string Message);

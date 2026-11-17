@@ -1,7 +1,8 @@
 using System;
 using System.Text.Json;
+using sma_prep.trains;
 
-namespace sma_prep.classes;
+namespace sma_prep.trainRepositories;
 
 public class TrainRepository : ITrainRepository
 {

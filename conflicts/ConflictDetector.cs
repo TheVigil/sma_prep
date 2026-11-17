@@ -1,4 +1,7 @@
-namespace sma_prep;
+using sma_prep.policies;
+using sma_prep.trains;
+
+namespace sma_prep.conflicts;
 
 public record Conflict ( 
     string TrainIdA, SectionOccupation OccupationA, 
@@ -6,10 +9,8 @@ public record Conflict (
     int headway
 );
 
-public class ConflictDetector(int minHeadwayMinutes, int freightHeadwayMinutes)
+public class ConflictDetector(IHeadwayPolicy headwayPolicy)
 {
-    private readonly int _minHeadwayMinutes = minHeadwayMinutes;
-    private readonly int _freightHeadwayMinutes = freightHeadwayMinutes;
     public IReadOnlyList<Conflict> DetectConflicts(IReadOnlyList<Train> trains)
     {
         var conflicts = new List<Conflict>();
@@ -19,16 +20,15 @@ public class ConflictDetector(int minHeadwayMinutes, int freightHeadwayMinutes)
             {
                 var a = trains[i];
                 var b = trains[j];
+                
+                int headway = headwayPolicy.GetHeadwayMinutes(a, b);
+                
                 foreach (var sa in a.Sections)
                 {
                     foreach (var sb in b.Sections)
                     {
                         if (sa.SectionId != sb.SectionId)
                             continue;
-
-                        int headway = (a is FreightTrain || b is FreightTrain)
-                        ? _freightHeadwayMinutes
-                        : _minHeadwayMinutes; 
 
                         if (sa.Entry < sb.Exit.AddMinutes(headway) && sb.Entry < sa.Exit.AddMinutes(headway))
                         {

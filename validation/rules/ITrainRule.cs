@@ -1,6 +1,6 @@
-using System;
+using sma_prep.trains;
 
-namespace sma_prep.interfaces;
+namespace sma_prep.rules;
 
 public interface ITrainRule
 {

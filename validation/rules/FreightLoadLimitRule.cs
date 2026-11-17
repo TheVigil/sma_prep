@@ -1,5 +1,5 @@
 using System;
-using sma_prep.interfaces;
+using sma_prep.rules;
 
 namespace sma_prep.rules;
 

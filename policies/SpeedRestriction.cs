@@ -1,6 +1,7 @@
 using System;
+using sma_prep.trains;
 
-namespace sma_prep.classes;
+namespace sma_prep.policies;
 
 public class SpeedRestriction
 {

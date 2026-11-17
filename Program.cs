@@ -1,7 +1,8 @@
-﻿using sma_prep;
-using sma_prep.classes;
-using sma_prep.interfaces;
+﻿using sma_prep.trainRepositories;
 using sma_prep.rules;
+using sma_prep.policies;
+using sma_prep.conflicts;
+using sma_prep.reporting;
 
 var repository = new TrainRepository("./data/trains.json");
 var validator = new TrainValidator(new ITrainRule[]
@@ -10,7 +11,8 @@ var validator = new TrainValidator(new ITrainRule[]
     new FreightLoadLimitRule(1500),
     new NoSectionsRule()
 });
-var conflictDetector = new ConflictDetector(3, 5);
+var headwayPolicy = new StandardHeadwayPolicy(freightHeadwayMinutes: 5, minHeadwayMinutes: 3);
+var conflictDetector = new ConflictDetector(headwayPolicy);
 var reportFormatter = new ReportFormatter();
 
 new TimetableBasics.TimetableService(repository, validator, conflictDetector, reportFormatter).Run();

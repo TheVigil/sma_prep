@@ -1,6 +1,6 @@
 using System;
 
-namespace sma_prep;
+namespace sma_prep.conflicts;
 
 public class SectionOccupation
 {
