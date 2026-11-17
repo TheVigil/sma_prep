@@ -1,6 +1,6 @@
 using System;
 using System.Text.Json.Serialization;
-using sma_prep.conflicts;
+using sma_prep.trains;
 
 namespace sma_prep.trains;
 

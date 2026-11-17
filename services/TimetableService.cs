@@ -1,7 +1,6 @@
 using sma_prep.rules;
 using sma_prep.trains;
 using sma_prep.trainRepositories;
-using sma_prep.conflicts;
 using sma_prep.reporting;
 using sma_prep.policies;
 
