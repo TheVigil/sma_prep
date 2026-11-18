@@ -18,7 +18,7 @@
     ]
   },
   {
-    "$type": "FreightTrain",
+    "$type": "Freight",
     "id": "G 7001",
     "operator": "SBB Cargo",
     "loadTonnes": 1800,

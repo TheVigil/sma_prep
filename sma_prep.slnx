@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="sma_prep.csproj" />
+  <Project Path="sma_prep.Tests/sma_prep.Tests.csproj" />
+</Solution>

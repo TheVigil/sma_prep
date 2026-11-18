@@ -9,5 +9,7 @@
   <ItemGroup>
     <None Update="data/trains.json" CopyToOutputDirectory="PreserveNewest"/>
   </ItemGroup>
-
+<ItemGroup>
+  <Compile Remove="sma_prep.Tests/**" />
+</ItemGroup>
 </Project>

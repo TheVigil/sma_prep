@@ -1,3 +1,4 @@
+/home/jon/dev/sma_prep/bin/Debug/net10.0/data/trains.json
 /home/jon/dev/sma_prep/bin/Debug/net10.0/sma_prep
 /home/jon/dev/sma_prep/bin/Debug/net10.0/sma_prep.deps.json
 /home/jon/dev/sma_prep/bin/Debug/net10.0/sma_prep.runtimeconfig.json
@@ -7,10 +8,9 @@
 /home/jon/dev/sma_prep/obj/Debug/net10.0/sma_prep.AssemblyInfoInputs.cache
 /home/jon/dev/sma_prep/obj/Debug/net10.0/sma_prep.AssemblyInfo.cs
 /home/jon/dev/sma_prep/obj/Debug/net10.0/sma_prep.csproj.CoreCompileInputs.cache
+/home/jon/dev/sma_prep/obj/Debug/net10.0/sma_prep.sourcelink.json
 /home/jon/dev/sma_prep/obj/Debug/net10.0/sma_prep.dll
 /home/jon/dev/sma_prep/obj/Debug/net10.0/refint/sma_prep.dll
 /home/jon/dev/sma_prep/obj/Debug/net10.0/sma_prep.pdb
 /home/jon/dev/sma_prep/obj/Debug/net10.0/sma_prep.genruntimeconfig.cache
 /home/jon/dev/sma_prep/obj/Debug/net10.0/ref/sma_prep.dll
-/home/jon/dev/sma_prep/bin/Debug/net10.0/data/trains.json
-/home/jon/dev/sma_prep/obj/Debug/net10.0/sma_prep.sourcelink.json
