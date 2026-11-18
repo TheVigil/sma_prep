@@ -11,7 +11,7 @@ public class TrainRepository : ITrainRepository
 
     public TrainRepository(string path) => _path = path;
 
-    public async Task<IReadOnlyList<Train>> GetAllTrainsAsync(CancellationToken cancellationToken)
+    public async Task<IReadOnlyList<Train>> GetAllTrainsAsync(CancellationToken cancellationToken = default)
     {
         await using var stream = File.OpenRead(_path);
         
