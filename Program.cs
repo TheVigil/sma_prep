@@ -15,5 +15,8 @@ var headwayPolicy = new StandardHeadwayPolicy(freightHeadwayMinutes: 5, minHeadw
 var conflictDetector = new ConflictDetector(headwayPolicy);
 var reportFormatter = new ReportFormatter();
 
-var timetableService = new TimetableBasics.TimetableService(repository, validator, conflictDetector, reportFormatter);
-await timetableService.RunAsync();
+var timetableService = new TimetableBasics.TimetableService(repository, validator, conflictDetector);
+
+var result = await timetableService.RunAsync();
+var report = new ReportFormatter().Format(result.Conflicts, result.ValidationMessages, DateTime.Now);
+Console.WriteLine(report);
